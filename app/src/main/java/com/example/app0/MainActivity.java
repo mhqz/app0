@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
         Config config = new Config.ConfigBuilder(this)
                 .setCacheType("bep5-http")
+                .setCacheHttpPubKey(BuildConfig.CACHE_PUB_KEY)
+                .setInjectorCredentials(BuildConfig.INJECTOR_USERNAME + ":" + BuildConfig.INJECTOR_PASSWORD)
+                .setInjectorTlsCert(BuildConfig.INJECTOR_TLS_CERT)
+                .setTlsCaCertStorePath(BuildConfig.TLS_CA_CERT_STORE_PATH)
             .build();
 
         ouinet = new Ouinet(this, config);

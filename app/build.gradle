@@ -2,6 +2,9 @@ plugins {
     id 'com.android.application'
 }
 
+Properties localProperties = new Properties()
+localProperties.load(rootProject.file('local.properties').newDataInputStream())
+
 android {
     compileSdk 32
 
@@ -13,6 +16,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "CACHE_PUB_KEY", localProperties['CACHE_PUB_KEY']
+        buildConfigField "String", "INJECTOR_USERNAME", localProperties['INJECTOR_USERNAME']
+        buildConfigField "String", "INJECTOR_PASSWORD", localProperties['INJECTOR_PASSWORD']
+        buildConfigField "String", "INJECTOR_TLS_CERT", localProperties['INJECTOR_TLS_CERT']
+        buildConfigField "String", "TLS_CA_CERT_STORE_PATH", localProperties['TLS_CA_CERT_STORE_PATH']
     }
 
     buildTypes {
