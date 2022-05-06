@@ -21,7 +21,6 @@ android {
         buildConfigField "String", "INJECTOR_USERNAME", localProperties['INJECTOR_USERNAME']
         buildConfigField "String", "INJECTOR_PASSWORD", localProperties['INJECTOR_PASSWORD']
         buildConfigField "String", "INJECTOR_TLS_CERT", localProperties['INJECTOR_TLS_CERT']
-        buildConfigField "String", "TLS_CA_CERT_STORE_PATH", localProperties['TLS_CA_CERT_STORE_PATH']
     }
 
     buildTypes {
