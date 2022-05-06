@@ -3,16 +3,9 @@
 ## Configuration
 
 Create a `local.properties` file in the root of this project and set the
-following values before building the app:
+following value before building the app:
 ```groovy
-CACHE_PUB_KEY="YOUR PUB KEY"
-INJECTOR_USERNAME="YOUR INJECTOR USERNAME"
-INJECTOR_PASSWORD="YOUR INJECTOR PASSWORD"
-INJECTOR_TLS_CERT="-----BEGIN CERTIFICATE-----\
-YOUR\
-TLS\
-CERT\
------END CERTIFICATE-----"
+CACHE_PUB_KEY="YOUR OUINET CACHE PUB KEY"
 ```
 
 Those values will be loaded by Gradle during the build process and used later

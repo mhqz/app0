@@ -18,9 +18,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "CACHE_PUB_KEY", localProperties['CACHE_PUB_KEY']
-        buildConfigField "String", "INJECTOR_USERNAME", localProperties['INJECTOR_USERNAME']
-        buildConfigField "String", "INJECTOR_PASSWORD", localProperties['INJECTOR_PASSWORD']
-        buildConfigField "String", "INJECTOR_TLS_CERT", localProperties['INJECTOR_TLS_CERT']
     }
 
     buildTypes {
